@@ -25,7 +25,8 @@
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <p>İletişim İçin E-mail Adresinizi Girin.</p>
                         <div class="my-5">
-                            <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <form method="post">
+                            {% csrf_token %}
                                 <div class="form-floating">
                                     <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..."/>
                                     <label for="name">İsim</label>
@@ -45,7 +46,7 @@
                                     <label for="message">İçerik</label>
                                 </div>
                                 <br>
-                                <button class="btn btn-dark text-uppercase" id="submitButton" type="submit">Oluştur</button>
+                                <button class="btn btn-dark text-uppercase" type="submit">Oluştur</button>
                             </form>
                         </div>
                     </div>
