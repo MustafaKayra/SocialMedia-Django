@@ -28,9 +28,8 @@
                             <form method="post">
                             {% csrf_token %}
                                 <div class="form-floating">
-                                    <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..."/>
+                                    <input class="form-control" id="name" name="author" type="text" placeholder="Enter your name..."/>
                                     <label for="name">İsim</label>
-                                    <div class="invalid-feedback">A name is required.</div>
                                 </div>
                                 <div class="form-floating">
                                     <input class="form-control" id="email" name="email" type="email" placeholder="Enter your email..."/>
@@ -39,7 +38,6 @@
                                 <div class="form-floating">
                                     <input class="form-control" id="phone" name="title" type="tel" placeholder="Enter your phone number..."/>
                                     <label for="phone">Başlık</label>
-                                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                                 </div>
                                 <div class="form-floating">
                                     <textarea class="form-control" id="message" name="content" placeholder="Enter your message here..." style="height: 12rem"></textarea>
