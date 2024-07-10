@@ -26,6 +26,7 @@
                         <p>Bu site tamamen örnek amaçlı olup herhangi bir hakkı olmamakla birlikte geliştirilen basit bir sosyal medya sitesidir.Sitede paylaşılan içeriklerin geliştiriciyle bir ilişkisi yoktur.</p>
                         <p>sitenin <a href="https://github.com/MustafaKayra/SocialMedia-Django" target="_blank">açık kaynak kodlarına</a> erişmek için.</p>
                         <p>Geliştiriciyle <a href="https://www.instagram.com/itsrkayra/" target="_blank">iletişime</a> geçmek için.</p>
+                        <a href="{% url 'delete' request.user.id %}"><button class="btn btn-primary">Bu Hesabı Silin</button></a>
                     </div>
                 </div>
             </div>

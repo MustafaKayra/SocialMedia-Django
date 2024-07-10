@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Kullanıcı Güncelleme{% endblock title %}
+
+{% block body %}
+
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('{% static 'img/contact-bg.jpg' %}')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="page-heading">
+                            <h1>Kullanıcı Bilgilerini Güncelleme</h1>
+                            <span class="subheading">Kullanıcı Bilgilerinizi Güncelleyerek Kendinizi Daha İyi Tanıtabilirsiniz</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <main class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <p>İletişim İçin E-mail Adresinizi Girin.</p>
+                        <div class="my-5">
+                            <form method="post">
+                            {% csrf_token %}
+                                <div class="form-floating">
+                                    <input class="form-control" id="name" name="username" type="text" value="{{request.user}}" placeholder="Enter your name..."/>
+                                    <label for="name">Kullanıcı Adı</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" id="phone" name="first_name" type="text" value="{{request.user.first_name}}" placeholder="Enter your email..."/>
+                                    <label for="email">İsim</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" type="password" id="password1" name="password1" type="tel" placeholder="Enter your phone number..."/>
+                                    <label for="phone">Şifre</label>
+                                </div>
+                               <div class="form-floating">
+                                    <input class="form-control" type="password" id="password2" name="password2" type="tel" placeholder="Enter your phone number..."/>
+                                    <label for="phone">Şifreyi Doğrula</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" id="phone" name="email" type="email" value="{{request.user.email}}" placeholder="Enter your phone number..."/>
+                                    <label for="phone">E-mail</label>
+                                </div>
+                                <br>
+                                <button class="btn btn-dark text-uppercase" type="submit">Güncelle</button>
+                                <br>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+{% endblock body %}

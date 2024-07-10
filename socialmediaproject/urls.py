@@ -5,6 +5,7 @@ from post import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('Post/',include('post.urls')),
+    path('User/',include('User.urls')),
     path('',views.index,name="index"),
     path('about/',views.about,name="about")
 ]
