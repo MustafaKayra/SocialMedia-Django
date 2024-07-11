@@ -16,12 +16,9 @@ def addpost(request):
     if request.method == "POST":
         form = PostForm(request.POST or None)
         if form.is_valid():
-            author = form.cleaned_data.get("author")
-            email = form.cleaned_data.get("email")
-            title = form.cleaned_data.get("title")
-            content = form.cleaned_data.get("content")
-
-            newPost = Post.objects.create(author=author,email=email,title=title,content=content)
+            newPost = form.save(commit=False)
+            newPost.author = request.user
+            newPost.email = request.user.email
             newPost.save()
 
             print('Post Başarıyla Kaydedildi(in terminal)')
@@ -29,3 +26,10 @@ def addpost(request):
     else:
         form = PostForm()
     return render(request,"addpost.html",{"form":form})
+
+def postdetail(request,slug):
+    post = Post.objects.get(slug=slug)
+    context = {
+        "post":post
+    }
+    return render(request,"postdetail.html",context)
