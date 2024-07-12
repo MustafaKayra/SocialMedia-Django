@@ -26,5 +26,8 @@ class Post(models.Model):
             self.slug = generate_unique_slug(self)
         super().save(*args, **kwargs)
 
+    def get_summary(self):
+        return self.content[:30] + '...'
+
     def __str__(self):
         return f"{self.title}"

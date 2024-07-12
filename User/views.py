@@ -79,3 +79,10 @@ def deleteuser(request,id):
     user.delete()
     print("Kullanıcı Başarıyla Ortadan Kaldırıldı")
     return redirect('index')
+
+def profile(request,id):
+    user = User.objects.get(id=id)
+    context = {
+        "user":user
+    }
+    return render(request,"profile.html",context)

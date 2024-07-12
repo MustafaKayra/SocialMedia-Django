@@ -27,7 +27,7 @@
                     <div class="post-preview">
                         <a href="{% url 'postdetail' post.slug %}">
                             <h2 class="post-title">{{post.title}}</h2>
-                            <h3 class="post-subtitle">{{post.content}}</h3>
+                            <h3 class="post-subtitle">{{post.get_summary}}</h3>
                         </a>
                         <p class="post-meta">
                             Posted by
