@@ -3,7 +3,7 @@ Site Python Django ile geliştirilen Bootstrap ile tasarlanan basit bir web uygu
 
 # Projede Kullanılan Teknolojiler
 Python-Django,
-Bootstarp 5
+Bootstrap 5
 
 # Proje Erişimi
 Projeyi kendi yerel bilgisayarınızda çalıştırmak için "https://github.com/MustafaKayra/SocialMedia-Django.git" kodunu çalıştırdıktan sonra sırasıyla "cd SocialMedia-Django","cd socialmediaproject" ve "python manage.py runserver 5000" kodlarını çalıştırarak projeye erişebilirsiniz.
