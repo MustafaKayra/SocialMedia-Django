@@ -2,7 +2,7 @@
 Site Python Django ile geliştirilen Bootstrap ile tasarlanan basit bir web uygulamasıdır.Gönderi ekleme,düzenleme,silme,kontrol etme ayrıca hesap açma,giriş,oturum kapatma,hesap silme,hesap bilgilerini düzenleme gibi özellikleri barındırıyor.
 
 # Projede Kullanılan Teknolojiler
-Python-Django
+Python-Django,
 Bootstarp 5
 
 # Proje Erişimi
